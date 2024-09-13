@@ -17,14 +17,15 @@
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <h2> MC-NeRF: Multi-Camera Neural Radiance Fields for</h2>
-            <h2> Multi-Camera Image Acquisition Systems </h2>
+            <h2> OpenGS-SLAM: Open-Set Dense Semantic SLAM with 3D Gaussian
+            Splatting </h2>
+            <h2> for Object-Level Scene Understanding </h2>
             <h4 style="color:#5a6268;">Current state: Continue Updating(last time:2024.3.18)</h4>
             <hr>
             <h6> 
-                <a target="_blank">Yu Gao</a><sup>1</sup>,
-                <a target="_blank">Lutong Su</a><sup>1</sup>, 
-                <a target="_blank">Hao Liang</a><sup>1</sup>, 
+                <a target="_blank">Dianyi Yang</a><sup>1</sup>,
+                <a target="_blank">Yu Gao</a><sup>1</sup>, 
+                <a target="_blank">Xihan Wang</a><sup>1</sup>, 
                 <a target="_blank">Yufeng Yue</a><sup>1</sup>, 
                 <a target="_blank">Yi Yang</a><sup>1†</sup>, 
                 <a target="_blank">Mengyin Fu</a><sup>1</sup>
@@ -59,7 +60,7 @@
         <div class="col-12 text-center">
           <h3>Abstract</h3>
             <hr style="margin-top:0px">
-          <p class="text-justify">Neural Radiance Fields (NeRF) use multi-view images for 3D scene representation, demonstrating remarkable performance. As one of the primary sources of multi-view images, multi-camera systems encounter challenges such as varying intrinsic parameters and frequent pose changes. Most previous NeRF-based methods assume a unique camera and rarely consider multi-camera scenarios. Besides, some NeRF methods that can optimize intrinsic and extrinsic parameters still remain susceptible to suboptimal solutions when these parameters are poorly initialized. In this paper, we propose MC-NeRF, a method that enables joint optimization of both intrinsic and extrinsic parameters alongside NeRF. The method also supports each image corresponding to independent camera parameters. First, we tackle coupling issues and the degenerate cases that arise from the joint optimization between intrinsic and extrinsic parameters. Second, based on the proposed solutions, we introduce an efficient calibration image acquisition scheme for multi-camera systems, including the design of a calibration object. Finally, we present an end-to-end network with a training sequence that enables the estimation of intrinsic and extrinsic parameters, along with the rendering network. Furthermore, recognizing that most existing datasets are designed for a unique camera, we construct a real multi-camera image acquisition system and create a corresponding new dataset, which includes both simulated data and real-world captured images. Experiments confirm the effectiveness of our method when each image corresponds to different camera parameters. Specifically, we use multi-cameras, each with different intrinsic and extrinsic parameters in a real-world system, to achieve 3D scene representation without providing initial poses.</p>
+          <p class="text-justify">Recent advancements in 3D Gaussian Splatting have significantly improved the efficiency and quality of dense semantic SLAM. However, the previous methods are always constrained by limited-category pre-trained classifiers and implicit semantic representation, which hinder their performance in open-set scenarios and restrict 3D object-level scene understanding. To address these issues, we propose OpenGS-SLAM, an innovative framework that utilizes 3D Gaussian representation to perform dense semantic SLAM in open-set environments. Our system integrates explicit semantic labels derived from 2D foundational models into the 3D Gaussian framework, facilitating robust 3D object-level scene understanding. We introduce Gaussian Voting Splatting to enable fast 2D label map rendering and scene updating. Additionally, we introduce Confidence-based 2D Label Consensus method to ensure consistent labeling across multiple views. Furthermore, we employ a Segmentation Counter Prune strategy to improve the accuracy of semantic scene representation. Extensive experiments on both synthetic and real-world datasets validate the effectiveness of our method in scene understanding, tracking, and mapping.</p>
         </div>
       </div>
     </div>
@@ -67,7 +68,7 @@
   <br>
 
   <!-- citing -->
-  <div class="container">
+<!--   <div class="container">
     <div class="row ">
       <div class="col-12">
           <h3>Citation</h3>
@@ -84,7 +85,7 @@
           <hr>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <footer class="text-center" style="margin-bottom:10px">
       Thanks to <a href="https://lioryariv.github.io/" target="_blank">Lior Yariv</a> for the website template.
