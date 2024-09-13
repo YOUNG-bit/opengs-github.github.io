@@ -1,1 +1,94 @@
-<h1> 123 </h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"> <!-- 声明文档的字符集 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- 设置网页视口的元数据标签 -->
+    <title>MC-NeRF</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet"> <!-- 表示被链接的文件是一个样式表文件 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+  </head>
+
+  <!-- cover -->
+  <section>
+    <!-- 内容划分元素 -->
+    <div class="jumbotron text-center mt-0"> <!--jumbotron类可用于创建具有特殊样式的大型容器，text-center类用于居中文本，而mt-0类用于删除顶部的外边距-->
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2> MC-NeRF: Multi-Camera Neural Radiance Fields for</h2>
+            <h2> Multi-Camera Image Acquisition Systems </h2>
+            <h4 style="color:#5a6268;">Current state: Continue Updating(last time:2024.3.18)</h4>
+            <hr>
+            <h6> 
+                <a target="_blank">Yu Gao</a><sup>1</sup>,
+                <a target="_blank">Lutong Su</a><sup>1</sup>, 
+                <a target="_blank">Hao Liang</a><sup>1</sup>, 
+                <a target="_blank">Yufeng Yue</a><sup>1</sup>, 
+                <a target="_blank">Yi Yang</a><sup>1†</sup>, 
+                <a target="_blank">Mengyin Fu</a><sup>1</sup>
+            <p>
+                <sup>1</sup>Beijing Institute of Technology &nbsp;&nbsp; 
+                <sup>†</sup>Corresponding Author &nbsp;&nbsp; 
+              </p>
+            <div class="row justify-content-center">
+              <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://arxiv.org/abs/2309.07846" role="button"  target="_blank">
+                    <i class="fa fa-file"></i> Paper</a> </p>
+              </div>
+              <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" href="https://github.com/SkylerGao/MC_NeRF" role="button"  target="_blank">
+                    <i class="fa fa-github-alt"></i> Code</a> </p>
+              </div>
+              <div class="column">
+                <p class="mb-5"><a class="btn btn-large btn-light" href="https://drive.google.com/drive/folders/16cdEC9WmDmiAp3oPmVwwhl_is6qUDh0K" role="button"  target="_blank">
+                  <i class="fa fa-database"></i> Dataset</a> </p>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- abstract -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Abstract</h3>
+            <hr style="margin-top:0px">
+          <p class="text-justify">Neural Radiance Fields (NeRF) use multi-view images for 3D scene representation, demonstrating remarkable performance. As one of the primary sources of multi-view images, multi-camera systems encounter challenges such as varying intrinsic parameters and frequent pose changes. Most previous NeRF-based methods assume a unique camera and rarely consider multi-camera scenarios. Besides, some NeRF methods that can optimize intrinsic and extrinsic parameters still remain susceptible to suboptimal solutions when these parameters are poorly initialized. In this paper, we propose MC-NeRF, a method that enables joint optimization of both intrinsic and extrinsic parameters alongside NeRF. The method also supports each image corresponding to independent camera parameters. First, we tackle coupling issues and the degenerate cases that arise from the joint optimization between intrinsic and extrinsic parameters. Second, based on the proposed solutions, we introduce an efficient calibration image acquisition scheme for multi-camera systems, including the design of a calibration object. Finally, we present an end-to-end network with a training sequence that enables the estimation of intrinsic and extrinsic parameters, along with the rendering network. Furthermore, recognizing that most existing datasets are designed for a unique camera, we construct a real multi-camera image acquisition system and create a corresponding new dataset, which includes both simulated data and real-world captured images. Experiments confirm the effectiveness of our method when each image corresponds to different camera parameters. Specifically, we use multi-cameras, each with different intrinsic and extrinsic parameters in a real-world system, to achieve 3D scene representation without providing initial poses.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
+  <!-- citing -->
+  <div class="container">
+    <div class="row ">
+      <div class="col-12">
+          <h3>Citation</h3>
+          <hr style="margin-top:0px">
+              <pre style="background-color: #e9eeef;padding: 1.25em 1.5em">
+<code>@misc{gao2024mcnerf,
+      title={MC-NeRF: Multi-Camera Neural Radiance Fields for Multi-Camera Image Acquisition Systems}, 
+      author={Yu Gao and Lutong Su and Hao Liang and Yufeng Yue and Yi Yang and Mengyin Fu},
+      year={2024},
+      eprint={2309.07846},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}</code></pre>
+          <hr>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-center" style="margin-bottom:10px">
+      Thanks to <a href="https://lioryariv.github.io/" target="_blank">Lior Yariv</a> for the website template.
+  </footer>
+
+</body>
+</html>
